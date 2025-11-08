@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connector Admin - Data Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #7c3aed;
+            --secondary-color: #5b21b6;
+            --background-color: #0f172a;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --border-color: #2d3748;
+            --container-bg: #1e293b;
+            --success-bg: #064e3b;
+            --success-text: #6ee7b7;
+            --error-bg: #7f1d1d;
+            --error-text: #fca5a5;
+            --gradient-start: #7c3aed;
+            --gradient-end: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .admin-container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80') center/cover;
+            opacity: 0.05;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        #jsonEditor {
+            width: 100%;
+            height: 500px;
+            font-family: 'Fira Code', monospace;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text-primary);
+            resize: vertical;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        #jsonEditor:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+            outline: none;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+
+        .status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: none;
+        }
+
+        .success {
+            background: var(--success-bg);
+            color: var(--success-text);
+            display: block;
+            animation: slideIn 0.3s ease-out;
+            border-left: 4px solid var(--success-text);
+        }
+
+        .error {
+            background: var(--error-bg);
+            color: var(--error-text);
+            display: block;
+            animation: slideIn 0.3s ease-out;
+            border-left: 4px solid var(--error-text);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="header">
+            <h1>Campus Connector Admin</h1>
+            <p>Manage campus data and chatbot responses</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Edit Campus Data</h2>
+            <textarea id="jsonEditor" spellcheck="false"></textarea>
+            <div class="button-container">
+                <button onclick="loadData()">Load Current Data</button>
+                <button onclick="saveData()">Save Changes</button>
+                <button onclick="formatJson()">Format JSON</button>
+            </div>
+            <div id="status" class="status"></div>
+        </div>
+    </div>
+
+    <script>
+        // Load current data
+        async function loadData() {
+            try {
+                const response = await fetch('campusData.json');
+                const data = await response.json();
+                document.getElementById('jsonEditor').value = JSON.stringify(data, null, 2);
+                showStatus('Data loaded successfully!', 'success');
+            } catch (error) {
+                showStatus('Error loading data: ' + error.message, 'error');
+            }
+        }
+
+        // Save changes
+        function saveData() {
+            try {
+                const jsonData = document.getElementById('jsonEditor').value;
+                // Validate JSON
+                JSON.parse(jsonData);
+                
+                // In a real application, this would send the data to a server
+                // For demo purposes, we'll save to localStorage
+                localStorage.setItem('campusData', jsonData);
+                showStatus('Changes saved successfully! (Demo: Saved to localStorage)', 'success');
+            } catch (error) {
+                showStatus('Error saving data: ' + error.message, 'error');
+            }
+        }
+
+        // Format JSON
+        function formatJson() {
+            try {
+                const jsonData = document.getElementById('jsonEditor').value;
+                const formatted = JSON.stringify(JSON.parse(jsonData), null, 2);
+                document.getElementById('jsonEditor').value = formatted;
+                showStatus('JSON formatted successfully!', 'success');
+            } catch (error) {
+                showStatus('Error formatting JSON: ' + error.message, 'error');
+            }
+        }
+
+        // Show status message
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = 'status ' + type;
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

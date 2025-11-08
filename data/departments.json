@@ -1,0 +1,119 @@
+{
+    "departments": {
+        "cse": {
+            "name": "Computer Science and Engineering",
+            "hod": {
+                "name": "Dr. A. Sri Lakshmi",
+                "designation": "Professor & HOD (CSE)",
+                "additionalRole": "NBA Coordinator",
+                "office": "CSE Block",
+                "office_hours": "Mon-Fri: 9:00 AM - 3:40 PM"
+            },
+            "faculty": [
+                {
+                    "name": "Dr. K. Srinivas",
+                    "designation": "Professor & HOD, IT & CSE (IoT)",
+                    "department": "CSE (IoT)"
+                },
+                {
+                    "name": "Dr. B. V. Swathi",
+                    "designation": "Professor & Dean",
+                    "role": "Training for Professional & Career Development"
+                },
+                {
+                    "name": "Dr. Puja S Prasad",
+                    "designation": "Professor & Associate Dean",
+                    "role": "Center for Computing Facilities"
+                }
+            ],
+            "location": "Block - 1",
+            "programs": ["B.Tech", "M.Tech"],
+            "contact": {
+                "email": "cse.dept@college.edu",
+                "phone": "+1-555-0124",
+                "fax": "+1-555-0125"
+            }
+        },
+        "ece": {
+            "name": "Electronics and Communication Engineering",
+            "hod": {
+                "name": "Dr. Michael Chang",
+                "email": "michael.chang@college.edu",
+                "phone": "+1-555-0126",
+                "office": "ECE Block, Room 201",
+                "office_hours": "Mon-Fri: 9:00 AM - 5:00 PM",
+                "qualifications": ["Ph.D. in Electronics", "M.Tech in Communication Systems"],
+                "specializations": ["VLSI Design", "Wireless Communications", "Signal Processing"],
+                "experience": "18+ years in academia and industry"
+            },
+            "location": "Block - 1",
+            "programs": ["B.Tech", "M.Tech"],
+            "contact": {
+                "email": "ece.dept@college.edu",
+                "phone": "+1-555-0127",
+                "fax": "+1-555-0128"
+            }
+        }
+        ,
+        "civil": {
+            "name": "Civil Engineering",
+            "hod": {
+                "name": "Dr. Anita Verma",
+                "email": "anita.verma@college.edu",
+                "phone": "+1-555-0130",
+                "office": "Civil Block, Room 102",
+                "office_hours": "Mon-Fri: 9:30 AM - 4:30 PM",
+                "qualifications": ["Ph.D. in Structural Engineering", "M.Tech in Civil Engineering"],
+                "specializations": ["Structural Engineering", "Geotechnical Engineering"],
+                "experience": "12+ years in academia and consulting"
+            },
+            "location": "Block - 2",
+            "programs": ["B.Tech", "M.Tech"],
+            "contact": {
+                "email": "civil.dept@college.edu",
+                "phone": "+1-555-0131",
+                "fax": "+1-555-0132"
+            }
+        },
+        "mech": {
+            "name": "Mechanical Engineering",
+            "hod": {
+                "name": "Dr. Rajesh Kumar",
+                "email": "rajesh.kumar@college.edu",
+                "phone": "+1-555-0133",
+                "office": "Mechanical Block, Room 210",
+                "office_hours": "Mon-Fri: 9:00 AM - 5:00 PM",
+                "qualifications": ["Ph.D. in Mechanical Engineering", "M.Tech in Thermal Engineering"],
+                "specializations": ["Thermal Engineering", "Design"],
+                "experience": "20+ years in academia and industry"
+            },
+            "location": "Block - 3",
+            "programs": ["B.Tech", "M.Tech"],
+            "contact": {
+                "email": "mech.dept@college.edu",
+                "phone": "+1-555-0134",
+                "fax": "+1-555-0135"
+            }
+        },
+        "pharmacy": {
+            "name": "Pharmacy",
+            "hod": {
+                "name": "Dr. Priya Nair",
+                "email": "priya.nair@college.edu",
+                "phone": "+1-555-0136",
+                "office": "Pharmacy Block, Room 12",
+                "office_hours": "Mon-Fri: 10:00 AM - 4:00 PM",
+                "qualifications": ["Pharm.D", "M.Pharm in Pharmacology"],
+                "specializations": ["Pharmacology", "Pharmaceutics"],
+                "experience": "10+ years in research and teaching"
+            },
+            "location": "Pharmacy Block",
+            "programs": ["B.Pharm", "M.Pharm"],
+            "contact": {
+                "email": "pharmacy.dept@college.edu",
+                "phone": "+1-555-0137",
+                "fax": "+1-555-0138"
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+  "college": {
+    "name": "Geethanjali College of Engineering and Technology (GCET)",
+    "keyPersonnel": {
+      "principal": {
+        "name": "Dr. K. Sagar",
+        "qualifications": ["B.E.", "M.Tech.", "Ph.D."],
+        "designation": "Principal"
+      },
+      "director": {
+        "name": "Dr. Udaya Kumar Susarla",
+        "designation": "Director",
+        "interests": ["Computer Networks", "Cryptography"]
+      }
+    },
+    "establishedYear": 2005,
+    "type": "Private, autonomous institution",
+    "affiliation": "Jawaharlal Nehru Technological University, Hyderabad",
+    "accreditation": "NAAC grade 'A+'",
+    "website": "https://gcet.edu.in/",
+    "contact": {
+      "phone": "9182058187",
+      "email": "info@gcet.edu.in",
+      "principalOffice": "9182058187",
+      "officeTiming": "9:00 AM – 3:40 PM (Sunday closed)"
+    },
+    "location": {
+      "address": "Cheeryala Village, Keesara Mandal",
+      "district": "Medchal District",
+      "state": "Telangana",
+      "country": "India",
+      "pinCode": "501301"
+    },
+    "campus": {
+      "area": "18 acres",
+      "facilities": [
+        "Modern infrastructure",
+        "Well-equipped labs",
+        "Library",
+        "Auditorium",
+        "Hostel",
+        "Sports facilities",
+        "Transport facilities"
+      ]
+    }
+  },
+  "academics": {
+    "programmes": {
+      "undergraduate": ["B.Tech"],
+      "postgraduate": ["M.Tech", "MBA"]
+    },
+    "branches": [
+      "Civil Engineering",
+      "Computer Science & Engineering (CSE)",
+      "Electrical & Electronics Engineering (EEE)",
+      "Electronics & Communication Engineering (ECE)",
+      "Mechanical Engineering",
+      "Information Technology",
+      "Data Science"
+    ],
+    "fees": {
+      "btech": {
+        "firstYear": {
+          "range": "₹1.05 Lakh – ₹1.2 Lakhs",
+          "note": "Varies by course & year"
+        }
+      }
+    },
+    "admission": {
+      "entrance": ["TS EAMCET"],
+      "eligibility": {
+        "ug": "10+2",
+        "pg": "Graduation + Entrance Exams"
+      }
+    }
+  },
+  "placements": {
+    "statistics": {
+      "companiesVisited": "100+",
+      "studentsPlaced": "850+",
+      "highestPackage": "₹44 LPA",
+      "averagePackage": "₹6 LPA"
+    },
+    "topRecruiters": [
+      "Amazon",
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "IBM",
+      "Capgemini",
+      "Mahindra",
+      "ISRO"
+    ]
+  },
+  "highlights": [
+    "Prominent engineering college in Telangana with autonomous status",
+    "NAAC A+ accreditation",
+    "Technical education on par with latest advances",
+    "Strong placement track record",
+    "Modern campus & infrastructure",
+    "Multiple engineering specialisations and PG options"
+  ],
+  "lastUpdated": "2025-10-28"
+}

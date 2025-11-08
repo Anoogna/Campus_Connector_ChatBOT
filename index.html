@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connector - Virtual Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div class="chat-container" id="chatView">
+            <div class="chat-header">
+                <div class="college-info">
+                    <img src="https://via.placeholder.com/40" alt="College Logo" class="college-logo">
+                    <h1>Campus Connector</h1>
+                </div>
+                <div class="header-controls">
+                    <button id="toggleVoice" class="control-button" title="Toggle Voice Output">
+                        <i class="material-icons">volume_up</i>
+                    </button>
+                    <button id="voiceInputBtn" class="control-button" title="Voice Input">
+                        <i class="material-icons">mic</i>
+                    </button>
+                    <select id="languageSelect" class="language-select" title="Select Language">
+                        <option value="en-US">English</option>
+                        <option value="hi-IN">हिंदी</option>
+                        <option value="te-IN">తెలుగు</option>
+                    </select>
+                </div>
+                <p class="subtitle">Your Virtual Campus Assistant</p>
+            </div>
+            
+            <div class="main-content">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            Hello! I'm your Campus Connector. How can I help you today?
+                        </div>
+                    </div>
+                    <div class="typing-indicator" id="typingIndicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" id="userInput" placeholder="Type your question here..." 
+                           aria-label="Type your message">
+                    <button id="voiceInputButton" class="input-button" aria-label="Voice Input">
+                        <i class="material-icons">mic</i>
+                    </button>
+                    <button id="sendButton" class="send-button" aria-label="Send message">
+                        <i class="material-icons">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events View -->
+        <div class="view-container hidden" id="eventsView">
+            <div class="view-header">
+                <h2>Campus Events</h2>
+                <div class="event-filters">
+                    <select id="eventCategory">
+                        <option value="all">All Categories</option>
+                        <option value="academic">Academic</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+            </div>
+            <div class="events-list" id="eventsList"></div>
+        </div>
+
+        <!-- Lost & Found View -->
+        <div class="view-container hidden" id="lostFoundView">
+            <div class="view-header">
+                <h2>Lost & Found</h2>
+                <button id="reportItemBtn" class="primary-button">Report Item</button>
+            </div>
+            <div class="lost-found-list" id="lostFoundList"></div>
+        </div>
+
+        <!-- Emergency Contact Modal -->
+        <div id="emergencyModal" class="modal">
+            <div class="modal-content">
+                <h3>Emergency Contacts</h3>
+                <div class="emergency-contacts">
+                    <button class="emergency-btn" data-contact="security">
+                        <i class="material-icons">security</i>
+                        Campus Security
+                    </button>
+                    <button class="emergency-btn" data-contact="ambulance">
+                        <i class="material-icons">local_hospital</i>
+                        Medical Emergency
+                    </button>
+                    <button class="emergency-btn" data-contact="warden">
+                        <i class="material-icons">contact_phone</i>
+                        Hostel Warden
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands"></script>
+    
+    <!-- Load our script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+{
+  "config": {
+    "supportedLanguages": ["english", "hindi", "telugu"],
+    "defaultLanguage": "english",
+    "emergencyContacts": {
+      "security": "9182058187",
+      "ambulance": "108",
+      "principalOffice": "9182058187"
+    }
+  },
+  "college": {
+    "name": "Geethanjali College of Engineering and Technology",
+    "establishedYear": 2005,
+    "type": "Private, autonomous institution",
+    "affiliation": "Jawaharlal Nehru Technological University, Hyderabad",
+    "accreditation": "NAAC grade 'A+'",
+    "website": "https://gcet.edu.in/",
+    "location": {
+      "mandal": "Keesara Mandal",
+      "village": "Cheeryala Village",
+      "district": "Medchal District",
+      "state": "Telangana",
+      "country": "India",
+      "pinCode": "501301",
+      "address": "Cheeryala Village, Keesara Mandal, Medchal District"
+    }
+  },
+  "departments": [
+    {
+      "name": "Computer Science",
+      "hod": "Dr. Sarah Johnson",
+      "contact": "sarah.johnson@campus.edu",
+      "location": "Block A, Floor 3",
+      "courses": ["B.Tech", "M.Tech", "PhD"],
+      "faculty": [
+        {
+          "name": "Dr. Sarah Johnson",
+          "role": "HOD",
+          "expertise": ["AI", "Machine Learning"],
+          "email": "sarah.johnson@campus.edu",
+          "office": "A-304"
+        }
+      ],
+      "labs": [
+        {
+          "name": "AI Research Lab",
+          "location": "A-301",
+          "equipment": ["GPU Servers", "Robotics Kit"],
+          "timing": "9:00 AM - 5:00 PM"
+        }
+      ],
+      "achievements": [
+        {
+          "title": "Best Department Award 2025",
+          "description": "Recognized for excellence in research"
+        }
+      ]
+    },
+    {
+      "name": "Electronics and Communication Engineering",
+      "hod": "Dr. Michael Chen",
+      "contact": "michael.chen@campus.edu",
+      "location": "Block B, Floor 2",
+      "courses": ["B.Tech", "M.Tech"]
+    }
+  ],
+  "facilities": {
+    "library": {
+      "name": "Central Library",
+      "location": "Academic Block",
+      "timings": "9:00 AM - 3:40 PM",
+      "resources": ["Books", "Journals", "Digital Resources", "Study Rooms", "Reference Section"]
+    },
+    "hostel": {
+      "available": true,
+      "types": ["Boys Hostel", "Girls Hostel"],
+      "facilities": ["Wi-Fi", "Dining Hall", "Security", "Power Backup"]
+    },
+    "transport": {
+      "available": true,
+      "type": "College Bus Service",
+      "coverage": "Multiple Routes"
+    },
+    "infrastructure": {
+      "campusArea": "18 acres",
+      "facilities": [
+        "Modern Classrooms",
+        "Well-equipped Labs",
+        "Auditorium",
+        "Sports Complex",
+        "Cafeteria",
+        "Medical Facility"
+      ]
+    },
+    "wifi": {
+      "coverage": "Campus-wide",
+      "access": "Available for students and staff",
+      "support": "IT Support Cell"
+    }
+  },
+  "events": [
+    {
+      "name": "TechFest 2025",
+      "date": "November 15-16, 2025",
+      "venue": "Main Auditorium",
+      "description": "Annual technical festival featuring competitions and workshops"
+    },
+    {
+      "name": "Cultural Night",
+      "date": "December 20, 2025",
+      "venue": "Open Air Theatre",
+      "description": "Annual cultural celebration with performances"
+    }
+  ],
+  "placements": {
+    "statistics": {
+      "companiesVisited": "100+",
+      "studentsPlaced": "850+",
+      "averagePackage": "₹6 LPA",
+      "highestPackage": "₹44 LPA",
+      "placementRate": "85%"
+    },
+    "topRecruiters": [
+      "Amazon",
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "IBM",
+      "Capgemini",
+      "Mahindra",
+      "ISRO"
+    ]
+  },
+  "examSchedules": [
+    {
+      "name": "Mid-semester Examinations",
+      "date": "November 1-10, 2025",
+      "venue": "Respective Classrooms"
+    },
+    {
+      "name": "End-semester Examinations",
+      "date": "December 5-20, 2025",
+      "venue": "Examination Halls"
+    }
+  ],
+  "academicSchedules": {
+    "workingHours": "9:00 AM – 3:40 PM",
+    "workingDays": "Monday to Saturday",
+    "holidays": "Sunday",
+    "attendanceRules": [
+      "Students must be punctual",
+      "Mandatory attendance in placement training",
+      "Written permission required to leave campus during working hours"
+    ],
+    "timetables": {
+      "academic_calendar": {
+        "current": "AY 2024-25",
+        "available_years": ["II Year", "III Year", "IV Year"],
+        "format": "Downloadable PDF"
+      },
+      "exam_branch": {
+        "recent_notices": [
+          "I B.Tech II Sem Regular/Supplementary Time Table – July 2025",
+          "II/III/IV Year II Sem B.Tech Mid-I Time Table – March 2025"
+        ],
+        "programs": ["B.Tech", "M.Tech", "MBA"]
+      },
+      "department_specific": {
+        "CSE": {
+          "AY2024_25": {
+            "semester_I": "Available in CSE Timetable section",
+            "semester_II": "Available in CSE Timetable section"
+          }
+        }
+      }
+    }
+  },
+  "transport": {
+    "available": true,
+    "arrivalTime": "8:40 AM",
+    "location": {
+      "mandal": "Keesara Mandal",
+      "village": "Cheeryal Village"
+    },
+    "type": "College Bus Service",
+    "routes": [
+      {
+        "routeNo": "1",
+        "via": "Secunderabad",
+        "arrivalTime": "8:40 AM"
+      },
+      {
+        "routeNo": "2",
+        "via": "ECIL",
+        "arrivalTime": "8:40 AM"
+      }
+    ],
+    "contact": "Transport Section Office"
+  }
+}
